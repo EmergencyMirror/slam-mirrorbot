@@ -45,8 +45,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/SlamDevs/slam-mirrorbot")
-    buttons.buildbutton("Channel", "https://t.me/SlamMirrorUpdates")
+    buttons.buildbutton("Owner", "https://t.me/soumyah002")
+    buttons.buildbutton("Channel", "https://t.me/ElixirMirror")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -233,7 +233,7 @@ def main():
         os.remove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>Bot Restarted!</b>"
+            text = "<b>Bot Restarted!🔥 </b> Please Resatrt Your Pause Mirror"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
